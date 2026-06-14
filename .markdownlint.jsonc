@@ -1,0 +1,13 @@
+{
+  // markdownlint config for this MkDocs (Material) documentation site.
+  // Defaults are tuned for English README files; a few don't fit a
+  // Chinese-language docs site rendered by MkDocs.
+
+  // MD013 line-length: MkDocs reflows prose, and CJK text is not hard-wrapped
+  // at 80 columns. Line length is irrelevant to the rendered output.
+  "MD013": false,
+
+  // MD036 no-emphasis-as-heading: the *date* subtitle and *最後更新* footer are
+  // intentional styled text in the title banner, not section headings.
+  "MD036": false
+}

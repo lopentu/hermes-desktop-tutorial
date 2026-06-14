@@ -1,5 +1,5 @@
-site_name: Hermes Agent 教學
-site_description: 用 Hermes Agent + Gemini + Telegram 從零開始
+site_name: Hermes Desktop 教學
+site_description: 用 Hermes Desktop + OpenRouter
 site_url: https://lopentu.github.io/hermes-desktop-tutorial/
 
 theme:
