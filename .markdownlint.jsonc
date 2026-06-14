@@ -9,5 +9,11 @@
 
   // MD036 no-emphasis-as-heading: the *date* subtitle and *最後更新* footer are
   // intentional styled text in the title banner, not section headings.
-  "MD036": false
+  "MD036": false,
+
+  // MD046 code-block-style: fenced code inside MkDocs/Material admonitions (!!!)
+  // must be indented 4 spaces, which markdownlint misreads as an "indented"
+  // code block and flags as inconsistent. The code is fenced; the rule just
+  // doesn't understand admonitions.
+  "MD046": false
 }

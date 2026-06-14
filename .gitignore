@@ -1,0 +1,9 @@
+# Python virtual environment (created with `uv venv`)
+.venv/
+
+# MkDocs build output (`mkdocs build` / `mkdocs gh-deploy` generate this)
+site/
+
+# Python caches
+__pycache__/
+*.py[cod]

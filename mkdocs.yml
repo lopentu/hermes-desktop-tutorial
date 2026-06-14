@@ -6,8 +6,8 @@ theme:
   name: material
   language: zh-TW
   palette:
-    primary: indigo
-    accent: indigo
+    scheme: default
+    # Custom brand color (#304535) is defined in stylesheets/extra.css
   features:
     - navigation.top
     - toc.follow
@@ -22,6 +22,7 @@ markdown_extensions:
       title: 目錄
   - tables
   - admonition
+  - attr_list
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences

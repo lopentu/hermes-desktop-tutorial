@@ -1,3 +1,23 @@
+/* Custom brand color palette (forest green #304535).
+   Material only accepts named primary colors, so the hex is applied here by
+   overriding the theme's CSS variables.
+
+   NOTE: these variables must be set on [data-md-color-scheme="default"] (the
+   <body> element), NOT :root (<html>). Material sets the indigo defaults on
+   <body> via [data-md-color-primary], and that body-level value would override
+   an inherited :root value. Same element + loaded after theme CSS = we win. */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #304535;
+  --md-primary-fg-color--light: #45604f;
+  --md-primary-fg-color--dark: #1e2c22;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: hsla(0, 0%, 100%, 0.7);
+
+  /* Used for link hover / focus states — a brighter green that complements
+     the primary. */
+  --md-accent-fg-color: #5c8a5a;
+}
+
 .md-typeset {
   font-size: 1rem;
 }
