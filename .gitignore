@@ -7,3 +7,6 @@ site/
 # Python caches
 __pycache__/
 *.py[cod]
+
+# Local Hermes config (distributed via Drive link, not served from the site)
+hermes-config.json
