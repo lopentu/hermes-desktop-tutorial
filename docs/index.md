@@ -376,6 +376,8 @@ https://www.skills.sh/obra/superpowers
   - 產出檔案放在哪、怎麼打開
 -->
 ### 可能的終極 Prompt
+
+
 ```text
 請用兩個 subagent 完成一份「解釋當前multi-agent 合作」教學投影片：
 請將所有生成的檔案存在/Users/amberber/Downloads/hermes-out/Phase 5
