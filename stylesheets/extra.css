@@ -1,0 +1,73 @@
+/* Custom brand color palette (forest green #304535).
+   Material only accepts named primary colors, so the hex is applied here by
+   overriding the theme's CSS variables.
+
+   NOTE: these variables must be set on [data-md-color-scheme="default"] (the
+   <body> element), NOT :root (<html>). Material sets the indigo defaults on
+   <body> via [data-md-color-primary], and that body-level value would override
+   an inherited :root value. Same element + loaded after theme CSS = we win. */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #304535;
+  --md-primary-fg-color--light: #45604f;
+  --md-primary-fg-color--dark: #1e2c22;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: hsla(0, 0%, 100%, 0.7);
+
+  /* Used for link hover / focus states — a brighter green that complements
+     the primary. */
+  --md-accent-fg-color: #5c8a5a;
+
+  /* Body link color — a more vivid green so links stand out from the
+     near-black body text (the dark primary green blended in). Passes WCAG AA
+     contrast on white. */
+  --md-typeset-a-color: #2f7d4f;
+}
+
+.md-typeset {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-typeset {
+    font-size: 1.1rem;
+  }
+}
+
+.md-nav,
+.md-nav__item,
+.md-nav__link,
+.md-nav__title {
+  font-size: 0.85rem !important;
+}
+
+.md-typeset h1 + p {
+  margin-top: -1.4rem;
+}
+
+.md-typeset table,
+.md-typeset table th,
+.md-typeset table td {
+  font-size: inherit !important;
+}
+
+.md-typeset h1 + p + h3 {
+  margin-top: 0.2rem;
+}
+
+.md-sidebar--primary {
+  display: none;
+}
+
+/* Make body links obvious: distinct color (set above) plus a persistent
+   underline, so they read as links without needing hover. Heading anchor
+   icons (.headerlink) are excluded so they aren't underlined/bolded. */
+.md-typeset a:not(.headerlink) {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 0.08em;
+  font-weight: 500;
+}
+
+.md-typeset a:not(.headerlink):hover {
+  text-decoration-thickness: 0.14em;
+}

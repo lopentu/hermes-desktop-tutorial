@@ -1,0 +1,1306 @@
+
+<!doctype html>
+<html lang="zh-TW" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="用 Hermes Desktop + OpenRouter">
+      
+      
+      
+        <link rel="canonical" href="https://lopentu.github.io/hermes-desktop-tutorial/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Hermes Desktop 教學</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-agent-hermes-desktop-openrouter" class="md-skip">
+          跳轉到
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href="." title="Hermes Desktop 教學" class="md-header__button md-logo" aria-label="Hermes Desktop 教學" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hermes Desktop 教學
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              打造你的 AI Agent：用 Hermes Desktop + OpenRouter
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="搜尋">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清除" aria-label="清除" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜尋引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="導覽列" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Hermes Desktop 教學" class="md-nav__button md-logo" aria-label="Hermes Desktop 教學" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Hermes Desktop 教學
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    打造你的 AI Agent：用 Hermes Desktop + OpenRouter
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    打造你的 AI Agent：用 Hermes Desktop + OpenRouter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        為什麼要學這個？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="為什麼要學這個？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llm-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一般 LLM 和 AI Agent 有什麼不同？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hermes-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        為什麼選 Hermes Agent？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hermes-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        今天的目標：Hermes Desktop
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        介紹介面
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="介紹介面">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backenddocker-vs-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend：Docker vs. Local
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hermes-configjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        設定檔（hermes-config.json）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openrouter-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        申請 OpenRouter API 金鑰
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        選擇模型：免費模型與備援
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="選擇模型：免費模型與備援">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        怎麼換模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delegate-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        委派任務（Delegate Tasks）的概念
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-1-subagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1：用 Subagent 製作教學投影片
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 1：用 Subagent 製作教學投影片">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        討論
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-2-skillssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2：探索 skills.sh
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 2：探索 skills.sh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安裝技能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        建立與修改研究計畫
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        整合新技能的 Prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可能的終極 Prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        為什麼要學這個？
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="為什麼要學這個？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llm-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一般 LLM 和 AI Agent 有什麼不同？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hermes-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        為什麼選 Hermes Agent？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hermes-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        今天的目標：Hermes Desktop
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        介紹介面
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="介紹介面">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backenddocker-vs-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend：Docker vs. Local
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hermes-configjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        設定檔（hermes-config.json）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openrouter-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        申請 OpenRouter API 金鑰
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        選擇模型：免費模型與備援
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="選擇模型：免費模型與備援">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        怎麼換模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delegate-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        委派任務（Delegate Tasks）的概念
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-1-subagent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1：用 Subagent 製作教學投影片
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 1：用 Subagent 製作教學投影片">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        討論
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-2-skillssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2：探索 skills.sh
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 2：探索 skills.sh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安裝技能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        建立與修改研究計畫
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        整合新技能的 Prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可能的終極 Prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ai-agent-hermes-desktop-openrouter">打造你的 AI Agent：用 Hermes Desktop + OpenRouter<a class="headerlink" href="#ai-agent-hermes-desktop-openrouter" title="Permanent link">&para;</a></h1>
+<p><em>2026 年 6 月 16 日 · 王伯雅 · 連大成 · <a href="https://ntu-chai.github.io/">人文AI共智未來實驗室 CHAI</a></em></p>
+<hr />
+<h2 id="_1">為什麼要學這個？<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="llm-ai-agent">一般 LLM 和 AI Agent 有什麼不同？<a class="headerlink" href="#llm-ai-agent" title="Permanent link">&para;</a></h3>
+<p>你大概用過 ChatGPT、Claude 或 Gemini。它們很會回答問題、寫文章、翻譯，但能做的也就到「跟你對話」為止：你問，它答，真正要動手的事還是得自己來。</p>
+<p>AI Agent 的不同不在於它「會不會」某件事，而在於它會不會自己去做。它能把任務拆成幾步、自己決定要用哪些工具，再看結果決定下一步。下面這張表把兩者的差別整理出來：</p>
+<table>
+<thead>
+<tr>
+<th>能力</th>
+<th>一般 LLM</th>
+<th>AI Agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>回答問題</td>
+<td>主要用途，依輸入生成文字</td>
+<td>也能回答，但通常只是過程的一環</td>
+</tr>
+<tr>
+<td>規劃與多步驟執行</td>
+<td>可以幫忙拆解，但每一步多半要你下指令</td>
+<td>自己排好步驟、依中間結果調整，一路做到完成</td>
+</tr>
+<tr>
+<td>使用工具</td>
+<td>流程多半固定，工具由開發者事先接好</td>
+<td>視任務需要自己選工具，例如搜尋、查資料庫、呼叫 API</td>
+</tr>
+<tr>
+<td>執行程式碼、操作檔案</td>
+<td>通常只能在平台的沙盒裡</td>
+<td>可以直接在你的電腦或伺服器上跑指令、讀寫檔案</td>
+</tr>
+<tr>
+<td>記憶與上下文</td>
+<td>靠當下的對話，必要時搭配記憶或 RAG</td>
+<td>會記錄任務進度與中間結果，後面的步驟再拿來用</td>
+</tr>
+<tr>
+<td>串接其他平台</td>
+<td>多半侷限在平台本身</td>
+<td>可以接 Telegram、Discord、Slack，收發訊息或觸發流程</td>
+</tr>
+</tbody>
+</table>
+<p>舉個例子：你要跑一個很久的實驗或備份，又不想守在電腦前。這時你掏出手機，傳一句話給你的 Bot：「開始備份桌面資料夾」或「執行這個分析程式」。Bot 就在你的電腦上動起來，你去吃飯、去上課，回來大概就跑完了。它不是教你怎麼做，而是替你把事情做完。</p>
+<h3 id="hermes-agent">為什麼選 Hermes Agent？<a class="headerlink" href="#hermes-agent" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/NousResearch/hermes-agent">Hermes Agent</a> 是 <a href="https://nousresearch.com/">Nous Research</a> 開發的開源框架，拿來上手有幾個好處：</p>
+<ul>
+<li>開源、採 MIT 授權，可以自由使用、修改，也能商用，適合教學或改成自己的版本。</li>
+<li>不綁模型，雲端 API 或本地模型都接得上。</li>
+<li>能串接 Telegram、Discord、Slack、WhatsApp 等平台。</li>
+<li>內建記憶與<a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/skills#common-commands">技能系統</a>，會從做過的任務累積經驗，把成功的流程整理成「技能」，下次遇到類似的事就能直接重用。</li>
+</ul>
+<h3 id="hermes-desktop">今天的目標：Hermes Desktop<a class="headerlink" href="#hermes-desktop" title="Permanent link">&para;</a></h3>
+<p>今天我們會用 Hermes Desktop，也就是搭配 Hermes Agent 的桌面應用程式。請先到<a href="https://hermes-agent.nousresearch.com/">官方網站下載安裝</a>：macOS 與 Windows 都有安裝檔，Linux 則可用官網提供的安裝指令。</p>
+<hr />
+<h2 id="_2">介紹介面<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><em>帶大家認識 Hermes Desktop 的主畫面與各區塊功能。</em></p>
+<!-- !!! note "📷 截圖：主介面"
+    在此插入 Hermes Desktop 主畫面截圖，並標註：對話區、subagent 面板、設定入口等重點區塊。 -->
+
+<!-- TODO:
+  - 逐一說明畫面上的主要區塊
+  - 標出待會會用到的按鈕／入口
+-->
+<div class="admonition note">
+<p class="admonition-title">主介面</p>
+<p><img alt="對話頁面" src="images/her_interface.png" width="880" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">外觀設定</p>
+<p><img alt="外觀設定" src="images/her_apperance.png" width="880" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">API 設定</p>
+<p><img alt="API 設定" src="images/her_model.png" width="880" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">模型選擇</p>
+<p><img alt="模型選擇" src="images/her_selection.png" width="880" /></p>
+</div>
+<h3 id="backenddocker-vs-local">Backend：Docker vs. Local<a class="headerlink" href="#backenddocker-vs-local" title="Permanent link">&para;</a></h3>
+<p>Hermes Desktop 的後端決定 agent 的指令在哪裡執行。最常用的是 Local 和 Docker，差別主要在於隔離性、需不需要額外安裝，以及執行速度。（Hermes 也支援 SSH、Modal 等遠端後端，今天先不談。）完整說明見<a href="https://hermes-agent.nousresearch.com/docs/user-guide/configuration#terminal-backend-configuration">官方設定文件</a>。</p>
+<table>
+<thead>
+<tr>
+<th>比較項目</th>
+<th>Docker</th>
+<th>Local</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>隔離性</td>
+<td>在獨立的 container 裡執行，與你的系統隔離（含安全強化）。</td>
+<td>直接在你的電腦上執行，沒有隔離，存取權限跟你的帳號一樣。</td>
+</tr>
+<tr>
+<td>事前安裝</td>
+<td>需要先安裝並啟動 Docker Desktop／Docker Engine。</td>
+<td>不需額外安裝，預設就能用。</td>
+</tr>
+<tr>
+<td>速度</td>
+<td>多一層 container，每個指令會有些許延遲，第一次還要先拉 image。</td>
+<td>沒有 container 負擔，最快。</td>
+</tr>
+<tr>
+<td>適合情境</td>
+<td>想要沙盒隔離、跑不完全信任的流程、需要可重現的環境，或多人共用機器。</td>
+<td>想要最快、直接存取本機檔案與工具，個人使用且不需隔離。</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">如何選擇</p>
+<p>本工作坊建議使用 Local：不需要安裝 Docker，agent 產生的檔案也直接在你的電腦上，馬上看得到。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">從沙盒到本機</p>
+<p><img alt="從沙盒到本機" src="images/her_docker_local.png" width="880" /></p>
+</div>
+<!-- *說明兩種後端執行方式的差別，協助大家依環境選擇。* -->
+
+<!-- !!! tip "如何選擇"
+    TODO: 一句話總結：什麼情況用 Docker、什麼情況用 Local。 -->
+
+<h2 id="hermes-configjson">設定檔（hermes-config.json）<a class="headerlink" href="#hermes-configjson" title="Permanent link">&para;</a></h2>
+<p><img alt="設定的匯出與匯入" src="images/her_config.png" width="880" /></p>
+<p>Hermes Desktop 的設定可以匯出成一份 <code>hermes-config.json</code> 來檢視或修改。請先用「<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 12h2v5h16v-5h2v5c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2zm10 3 5.55-5.46-1.42-1.41L13 11.25V2h-2v9.25L7.88 8.13 6.46 9.55z"/></svg></span> 匯出設定」匯出目前的設定，打開後找到 <code>terminal</code> 裡的 <code>backend</code> 欄位確認一下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;terminal&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;backend&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;local&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
+</code></pre></div>
+<p>如果 <code>backend</code> 是 <code>"docker"</code>，請改成 <code>"local"</code>（原因見上面的「Backend：Docker vs. Local」），存檔後再用「<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 12h2v5h16v-5h2v5c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2zM12 2 6.46 7.46l1.42 1.42L11 5.75V15h2V5.75l3.13 3.13 1.42-1.43z"/></svg></span> 匯入設定」載入。</p>
+<div class="admonition note">
+<p class="admonition-title">關於模型</p>
+<p>模型不用在這裡改，本工作坊用的 <code>nvidia/nemotron-3-super-120b-a12b:free</code> 本來就在模型選單裡，直接從下拉選單選即可。只有要換成選單裡沒有的模型時，才需要回到設定檔修改（見後面的「選擇模型」一節）。</p>
+</div>
+<h2 id="openrouter-api">申請 OpenRouter API 金鑰<a class="headerlink" href="#openrouter-api" title="Permanent link">&para;</a></h2>
+<p><a href="https://openrouter.ai/">OpenRouter</a> 是一個統一的模型 API 平台，透過單一介面接入 400 多個來自不同供應商的語言模型。本工作坊用它的原因很簡單：可以用同一把 API 金鑰免費試用多種模型，不需要分別申請各家帳號。</p>
+<p>要讓 Hermes 連上 OpenRouter，得先有一把 API 金鑰。如果還沒有帳號，請先註冊。</p>
+<ol>
+<li>
+<p>滑鼠移到右上角的使用者名稱，點「Profile」。</p>
+<p><img alt="在 OpenRouter 右上角選單點 Profile" src="images/openrouter-dropdown.png" width="300" /></p>
+</li>
+<li>
+<p>Profile 頁會顯示使用統計，例如每天用掉的 token、最常用的模型。點左側欄的「API Keys」。</p>
+<p><img alt="OpenRouter Profile 頁，左側欄有 API Keys" src="images/openrouter-profile.png" width="700" /></p>
+</li>
+<li>
+<p>在 API Keys 頁，點右上角的「+ New Key」，跳出表單後幫金鑰取個名字，再按「Create」。</p>
+<p><img alt="OpenRouter 新增 API 金鑰的表單" src="images/openrouter-api-key.png" width="700" /></p>
+</li>
+</ol>
+<p>建好金鑰後複製起來（格式長得像 <code>sk-or-v1-...</code>，只會完整顯示一次，記得先存好），回到 Hermes Desktop 把它加進去：</p>
+<ol>
+<li>點 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"/></svg></span> 開啟設定。</li>
+<li>進入 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> 提供方 › <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 18v4h-4v-3h-3v-3h-3l-2.26-2.26c-.55.17-1.13.26-1.74.26a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6c0 .61-.09 1.19-.26 1.74zM7 5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span> API 金鑰。</li>
+<li>在 OpenRouter 欄位貼上金鑰。</li>
+<li>按 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9H5V5h10m-3 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3m5-16H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7z"/></svg></span> 儲存。</li>
+</ol>
+<p><img alt="在 Hermes Desktop 的「提供方 › API 金鑰」頁把金鑰貼到 OpenRouter 並儲存" src="images/hermes-add-openrouter-apikey.png" width="700" /></p>
+<h2 id="_3">選擇模型：免費模型與備援<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>本工作坊從 <code>nvidia/nemotron-3-super-120b-a12b:free</code> 開始。我們透過 OpenRouter 使用免費模型，但免費模型的穩定度時好時壞：吞吐量可能很低，或因為太多人同時用而塞住，所以要隨時準備換一個。</p>
+<p>在 Hermes Desktop 的模型選單搜尋 <code>free</code>，目前只會看到三個：</p>
+<p><img alt="在 Hermes Desktop 搜尋 free 只會看到三個免費模型" src="images/hermes-free-models.png" width="360" /></p>
+<table>
+<thead>
+<tr>
+<th>選單顯示名稱</th>
+<th>模型 ID（填進 config 用這個）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nemotron 3 Super 120b A12b:Free</td>
+<td><code>nvidia/nemotron-3-super-120b-a12b:free</code></td>
+</tr>
+<tr>
+<td>Nemotron 3 Ultra 550b A55b:Free</td>
+<td><code>nvidia/nemotron-3-ultra-550b-a55b:free</code></td>
+</tr>
+<tr>
+<td>Laguna M.1:Free</td>
+<td><code>poolside/laguna-m.1:free</code></td>
+</tr>
+</tbody>
+</table>
+<p>如果這三個都沒回應，到 OpenRouter 的<a href="https://openrouter.ai/collections/free-models">免費模型清單</a>找其他可用的（例如 <code>openai/gpt-oss-120b:free</code>、<code>google/gemma-4-31b-it:free</code>）。</p>
+<h3 id="_4">怎麼換模型<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>選單裡的三個可以直接點選；如果要用清單裡沒有的免費模型，就得改設定檔：</p>
+<ol>
+<li>點「<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 12h2v5h16v-5h2v5c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2zm10 3 5.55-5.46-1.42-1.41L13 11.25V2h-2v9.25L7.88 8.13 6.46 9.55z"/></svg></span> 匯出設定」，打開 <code>hermes-config.json</code>。</li>
+<li>找到最上面的 <code>"model"</code> 欄位，換成新的模型 ID。</li>
+<li>存檔。</li>
+<li>點「<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 12h2v5h16v-5h2v5c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2zM12 2 6.46 7.46l1.42 1.42L11 5.75V15h2V5.75l3.13 3.13 1.42-1.43z"/></svg></span> 匯入設定」載入修改後的檔案。</li>
+</ol>
+<p>例如要改用清單裡的 <code>openai/gpt-oss-120b:free</code>（它不在下拉選單中），就把最上面那一行換成：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;model&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;openai/gpt-oss-120b:free&quot;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">結尾的 <code>:free</code> 不能少</p>
+<p>模型 ID 結尾一定要是 <code>:free</code>，否則會走到付費版本並扣你的 credits。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">免費模型的速率限制</p>
+<p>OpenRouter 對 <code>:free</code> 模型有限制（<a href="https://openrouter.ai/docs/api/reference/limits">官方說明</a>）：</p>
+<ul>
+<li>每分鐘最多 20 次請求。</li>
+<li>每天上限：購買少於 10 credits → 50 次；購買至少 10 credits → 1000 次。</li>
+<li>帳戶額度為負時，連免費模型都會回 402，加值到正數才能再用。</li>
+<li>短時間請求暴增可能被 Cloudflare 的 DDoS 防護擋下。</li>
+</ul>
+<p>Agent 跑一個任務常常包含很多步，每步都算一次請求，所以 50 次/天很快用完。今天若要密集操作，建議先儲值 10 credits 把上限拉到 1000 次/天。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">如果免費模型一直連不上（資料政策）</p>
+<p>OpenRouter 的<a href="https://openrouter.ai/settings/privacy">隱私設定</a>裡有個「Free endpoints that may train on request data」開關，預設是開啟的，免費模型需要它開著才能用。除非你曾為了隱私把它關掉，那會收到「No endpoints found matching your data policy」的錯誤，把它打開即可。</p>
+<p><img alt="OpenRouter 隱私設定中「Free endpoints that may train on request data」開關，預設為開啟" src="images/openrouter-privacy.png" width="680" /></p>
+</div>
+<h2 id="delegate-tasks">委派任務（Delegate Tasks）的概念<a class="headerlink" href="#delegate-tasks" title="Permanent link">&para;</a></h2>
+<ul>
+<li>委派任務是指：主對話中的 agent 不一定自己完成所有事情，而是把一部分工作交給不同的 subagent 執行。你可以把主 agent 想成專案負責人，它負責理解目標、拆解任務、決定誰要做什麼；subagent 則像被臨時指派的專家，只負責完成某個明確的小任務。</li>
+</ul>
+<!-- subagent 的好處是可以分工。比如同一個目標是「做一份 multi-agent 教學投影片」，我們可以先派一個 Researcher 去查資料、整理重點，再派一個 Slide-maker 根據整理好的內容製作投影片。這樣每個 subagent 的任務比較清楚，也可以搭配不同 toolset：Researcher 需要 web 搜尋，Slide-maker 需要檔案操作、程式執行或簡報技能。 -->
+
+<ul>
+<li>重要限制：subagent 通常看不到主對話前面發生的所有內容，也看不到其他 subagent 的完整對話。它只知道你在委派時放進它 context 的資訊。因此，如果你希望第二個 subagent 使用第一個 subagent 的研究結果，不能只說「根據剛剛的結果做投影片」，而要把研究摘要完整貼進第二個 subagent 的指令中。</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">委派任務</p>
+<p><img alt="委派任務" src="images/her_delegate.png" width="880" /></p>
+</div>
+<!-- 實作時可以遵守一個原則：委派出去的任務要像一張完整的工作單。裡面應該包含目標、輸入資料、輸出格式、檔案儲存位置、可使用的工具，以及任何不能遺漏的限制。context 給得越完整，subagent 越能穩定產出你想要的結果。 -->
+
+<!-- *解釋「委派任務」是什麼、為什麼要把工作拆給多個 subagent，以及 context 為何無法跨 subagent 共享。*
+
+<!-- TODO:
+  - 什麼是 subagent？跟主對話的關係
+  - 為什麼要委派：分工、各自專精的 toolset
+  - 關鍵限制：subagent 看不到前面的對話，必要資訊要「完整貼進」它的 context
+-->
+
+<h2 id="phase-1-subagent">Phase 1：用 Subagent 製作教學投影片<a class="headerlink" href="#phase-1-subagent" title="Permanent link">&para;</a></h2>
+<p><em>第一次體驗：用兩個 subagent（Researcher → Slide-maker）做出一份解釋 multi-agent 合作的投影片。</em></p>
+<p>請直接複製以下 prompt 給 Hermes：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>請用兩個 subagent 完成一份「解釋當前multi-agent 合作」教學投影片：
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>步驟 1 派一個 Researcher（toolsets: web）：
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>搜集「LLM multi-agent 合作」的重點，回傳：5 個關鍵概念 + 每個一句說明
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>+ 3 篇代表性論文（標題/年份/連結）。用條列回傳。
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>請將檔案存在 ~/Downloads/hermes-out
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>步驟 2 收到 Researcher 摘要後，把那份摘要「完整貼進」下一個 subagent的 context（因為它看不到前面的對話），派一個 Slide-maker
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>（啟用 PowerPoint skill，toolsets: 程式執行 + 檔案）：
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>根據摘要做一份 8 頁 .pptx：封面 + 5 個概念各一頁 + 參考文獻頁。
+</code></pre></div>
+<!-- ### 內建 Skill：產生 PPT
+
+*說明 Slide-maker 如何透過內建的 PowerPoint skill 把摘要轉成 `.pptx`。*
+
+<!-- TODO:
+  - PowerPoint skill 在做什麼
+  - 啟用方式、需要哪些 toolset（程式執行 + 檔案）
+  - 產出檔案會放在哪裡
+-->
+
+<h3 id="_5">討論<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">委派任務思考歷程</p>
+<p><img alt="委派任務思考歷程 1" src="images/her_phase1_think.png" width="880" />
+<img alt="委派任務思考歷程 2" src="images/her_phase1_think2.png" width="880" />
+<img alt="委派任務思考歷程 3" src="images/her_phase1_think3.png" width="880" /></p>
+</div>
+<ul>
+<li>請把產出投影片上傳到<a href="https://drive.google.com/drive/folders/1TpJCUTWVr44yEIbNyyHCXcGfRkx9X4m2?usp=sharing">這個資料夾</a>。</li>
+</ul>
+<p>可以討論：</p>
+<ul>
+<li>兩個 subagent 的分工是否清楚？</li>
+<li>「完整貼進 context」這一步如果沒做會發生什麼？</li>
+<li>產出的投影片品質如何、可以怎麼改進？</li>
+</ul>
+<h2 id="phase-2-skillssh">Phase 2：探索 skills.sh<a class="headerlink" href="#phase-2-skillssh" title="Permanent link">&para;</a></h2>
+<p><em>進一步引入 <a href="https://www.skills.sh">skills.sh</a> 上的社群技能，讓 agent 先「規劃」再執行。</em></p>
+<h3 id="_6">安裝技能<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>技能（Skill）是一份給 agent 的工作流程說明，把「這個任務要怎麼做」寫好，agent 遇到相關任務時就自動讀入並照做。使用技能有幾個好處：</p>
+<ul>
+<li><strong>不用重複解釋</strong>：同樣的流程不必每次寫進 prompt，技能會自動載入。</li>
+<li><strong>結果一致、可重現</strong>：固定的流程讓 agent 每次處理同類任務的方式相同，輸出更穩定，也更容易除錯和改進。</li>
+<li><strong>載入背景知識</strong>：技能資料夾可以附帶參考文件，agent 需要時會自動讀入，不用每次手動貼進對話。</li>
+</ul>
+<p>技能有兩種啟動方式：</p>
+<ol>
+<li><strong>Slash 指令</strong>：在輸入框打 <code>/&lt;技能名稱&gt;</code>，技能立即載入。</li>
+<li><strong>自然語言</strong>：agent 判斷任務內容符合某個技能的描述時，會自動載入，不需要你下指令。</li>
+</ol>
+<p>延伸閱讀：<a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/skills">Hermes 技能文件</a></p>
+<p><a href="https://www.skills.sh">skills.sh</a> 是由 Vercel 維護的開源「技能目錄」，可以想成 <strong>AI agent 的 App Store</strong>：別人寫好的能力（技能），一行指令就能裝進你的 agent。這正是前面提到的「技能系統」，只是這些技能來自社群。技能本身是一套開放規格：一個資料夾裡放一個 <code>SKILL.md</code>（至少包含名稱、說明與操作指示），完整規格可參考 <a href="https://agentskills.io/home">Agent Skills</a>。</p>
+<p><img alt="skills.sh 網站首頁：技能排行榜與分類目錄" src="images/skills-sh.png" width="700" /></p>
+<div class="admonition warning">
+<p class="admonition-title">安裝技能前先確認來源</p>
+<p>技能可以在你的電腦上執行程式碼，安裝前請確認來源可信。常見風險：</p>
+<ul>
+<li><strong>供應鏈攻擊</strong>：有人會用相似名稱的假技能（typosquatting）混入技能目錄。</li>
+<li><strong>程式碼執行</strong>：技能內附的腳本有存取本機檔案的能力。</li>
+</ul>
+<p>安裝前可以到 skills.sh 的技能頁面，確認右側是否有安全檢測結果（如 Gen Agent Trust Hub、Socket、Snyk），通過審計的技能風險相對較低。</p>
+<p><img alt="skills.sh 技能頁面右側顯示安全檢測結果，三項均為 PASS" src="images/ask-questions.png" width="700" /></p>
+<p>想了解更多，可參考 <a href="https://www.akamai.com/blog/security/top-10-threats-related-agent-skills">Akamai 的完整分析</a>。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title"><code>hermes skills install</code> 接受多種來源</p>
+<p>同一個指令可以吃不同形式的識別碼，依技能來源而定（所以下面三個指令長得不一樣）：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>hermes<span class="w"> </span>skills<span class="w"> </span>install<span class="w"> </span>obra/superpowers<span class="w">                  </span><span class="c1"># GitHub 短名 owner/repo</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>hermes<span class="w"> </span>skills<span class="w"> </span>install<span class="w"> </span>official/security/1password<span class="w">       </span><span class="c1"># 內建官方目錄</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>hermes<span class="w"> </span>skills<span class="w"> </span>install<span class="w"> </span>skills-sh/vercel-labs/json-render<span class="w"> </span><span class="c1"># skills.sh slug</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>hermes<span class="w"> </span>skills<span class="w"> </span>install<span class="w"> </span>https://github.com/.../SKILL.md<span class="w">   </span><span class="c1"># 直接指向 SKILL.md 的網址</span>
+</code></pre></div>
+<p>加上 <code>--yes</code> 可略過確認提示，方便 agent 在自動化流程中免互動安裝。</p>
+</div>
+<p>本工作坊會用到這兩個新技能：</p>
+<ul>
+<li><a href="https://www.skills.sh/trailofbits/skills/ask-questions-if-underspecified">ask-questions-if-underspecified</a> — 需求不明確時，讓 agent 先發問釐清再動手。</li>
+<li><a href="https://www.skills.sh/obra/superpowers">superpowers</a> — 一組通用工作流程技能（腦力激盪、系統化除錯、TDD 等）。</li>
+</ul>
+<p>安裝指令如下（每個技能的來源不同，故格式不一；<code>--yes</code> 表示免互動安裝）：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>hermes<span class="w"> </span>skills<span class="w"> </span>install<span class="w"> </span>https://github.com/trailofbits/skills/blob/main/plugins/ask-questions-if-underspecified/skills/ask-questions-if-underspecified/SKILL.md<span class="w"> </span>--yes
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>hermes<span class="w"> </span>skills<span class="w"> </span>install<span class="w"> </span>obra/superpowers<span class="w"> </span>--yes
+</code></pre></div>
+<p>安裝完成後，技能會出現在兩個地方：</p>
+<p><strong>1. 輸入 <code>/</code> 時自動補全</strong></p>
+<p>在輸入框打 <code>/</code> 再接技能名稱（例如 <code>/superpowers</code>），就會跳出建議清單，選擇後即可套用該技能。</p>
+<p><img alt="輸入 / 時，已安裝的 superpowers 技能會自動補全" src="images/skill-prompt.png" width="380" /></p>
+<p><strong>2.「技能與工具」分頁</strong></p>
+<p>切到左側的「技能與工具」分頁，可以看到所有已安裝的技能、用搜尋框過濾分類，並用右側開關啟用或停用。</p>
+<!-- ![技能與工具分頁中列出已安裝的 superpowers 技能，右側有啟用開關](images/skills-menu.png){ width="700" } -->
+<p><img alt="技能與工具分頁中列出已安裝的 superpowers 技能，右側有啟用開關" src="images/her_skill.png" width="700" /></p>
+<h3 id="_7">建立與修改研究計畫<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p><em>先請 agent 產出一份研究計畫，再逐步調整需求。</em></p>
+<p>依序給出這些指示：</p>
+<ol>
+<li>Create a plan to research multi-agent systems for collaboration.</li>
+<li>Update the plan: 不只涵蓋研究論文，也要納入「如何在真實世界實作 multi-agent 系統」的部落格文章。</li>
+<li>確認最終報告以<strong>台灣繁體中文</strong>呈現。</li>
+<li>以一份 .pptx 投影片作為最終交付成果。</li>
+</ol>
+<!-- TODO: 說明為什麼要先規劃再執行（ask-questions-if-underspecified / superpowers 的角色）。 -->
+
+<h3 id="prompt">整合新技能的 Prompt<a class="headerlink" href="#prompt" title="Permanent link">&para;</a></h3>
+<p><em>在 Phase 1 的基礎上，加入「下載技能」與「先規劃」兩個步驟。</em></p>
+<ul>
+<li>
+<p>哪一個prompt 比較好？為什麼？</p>
+</li>
+<li>
+<p>版本1</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>請用兩個 subagent 完成一份「解釋當前multi-agent 合作」教學投影片：
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>步驟 1 請下載這些技能：
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>https://www.skills.sh/trailofbits/skills/ask-questions-if-underspecified
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>https://www.skills.sh/obra/superpowers
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>步驟 2 請先研究計畫如何解釋當前multi-agent 合作
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>步驟 3 根據你的計畫派一個 Researcher（toolsets: web）：
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>搜集「LLM multi-agent 合作」的重點，回傳：5 個關鍵概念 + 每個一句說明
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>+ 3 篇代表性論文（標題/年份/連結）。用條列回傳。
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>請將檔案存在 ~/Downloads/hermes-out
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>步驟 4 收到 Researcher 摘要後，把那份摘要「完整貼進」下一個 subagent的 context（因為它看不到前面的對話），派一個 Slide-maker
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>（啟用 PowerPoint skill，toolsets: 程式執行 + 檔案）：
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>根據摘要做一份 8 頁 .pptx：封面 + 5 個概念各一頁 + 參考文獻頁。
+</code></pre></div>
+<ul>
+<li>版本2</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>請用兩個 subagent 完成一份「解釋當前multi-agent 合作」教學投影片：
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>步驟 1 請下載這些技能：
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>https://www.skills.sh/trailofbits/skills/ask-questions-if-underspecified
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>https://www.skills.sh/obra/superpowers
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>步驟 2 請善用你下載的技能（ask-questions-if-underspecified與superpowers），先研究規劃如何解釋當前multi-agent 合作
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>步驟 3 根據你步驟 2的規劃派一個 Researcher（toolsets: web）：
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>搜集「LLM multi-agent 合作」的重點，回傳關鍵概念 + 每個概念至少一句說明+ 每個重點3篇代表性論文（標題/年份/連結）。用條列回傳。
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>請將檔案存在 ~/Downloads/hermes-out
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>步驟 4 收到 Researcher 摘要後，把那份摘要與你步驟 2的規劃「完整貼進」下一個 subagent的 context（因為它看不到前面的對話），派一個 Slide-maker（啟用 PowerPoint skill，toolsets: 程式執行 + 檔案）：
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>根據摘要與你步驟 2的規劃要做一份 8 頁 .pptx（包含封面 與 參考文獻頁）。
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">委派任務思考歷程（版本 1）</p>
+<p>Subagent 1</p>
+<p><img alt="版本 1：Subagent 1 思考歷程" src="images/her_v1_think1.png" width="880" /></p>
+<p>Subagent 2</p>
+<p><img alt="版本 1：Subagent 2 思考歷程" src="images/her_v1_think2.png" width="880" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">委派任務思考歷程（版本 2）</p>
+<p>Core Agent: Review Skill</p>
+<p><img alt="版本 2：Review Skill" src="images/her_v2_reviewskill.png" width="880" /></p>
+<p>Core Agent: Ask Questions</p>
+<p><img alt="版本 2：Ask Questions" src="images/her_v2_askq.png" width="880" /></p>
+<p>Core Agent: Plan</p>
+<p><img alt="版本 2：Plan" src="images/her_v2_plan.png" width="880" /></p>
+<p>Core Agent: Delegation 1</p>
+<p><img alt="版本 2：Delegation 1" src="images/her_v2_delegate1.png" width="880" /></p>
+<p>Core Agent: Delegation 2</p>
+<p><img alt="版本 2：Delegation 2" src="images/her_v2_delegate2.png" width="880" /></p>
+</div>
+<ul>
+<li>請把產出投影片上傳到<a href="https://drive.google.com/drive/folders/1hYBihxff8KIfnvmJGsNGeaoocWEExKgV?usp=sharing">這個資料夾</a>。</li>
+</ul>
+<p>可以討論：</p>
+<ul>
+<li>可以如何進一步改進 prompt language？</li>
+</ul>
+<!-- TODO: 產出與檢視最終簡報
+  - 用 PowerPoint skill 產生 .pptx 的流程
+  - 產出檔案放在哪、怎麼打開
+-->
+<h3 id="prompt_1">可能的終極 Prompt<a class="headerlink" href="#prompt_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>請用兩個 subagent 完成一份「解釋當前multi-agent 合作」教學投影片：
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>請將所有生成的檔案存在 ~/Downloads/hermes-out/final
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>步驟 1 請下載這些技能：
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>https://www.skills.sh/trailofbits/skills/ask-questions-if-underspecified
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>https://www.skills.sh/obra/superpowers
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>如果已經有了請確保一定要使用它們
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>如果有了卻不能用，請試著再用以下方式安裝：
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>hermes skills install https://github.com/slidevjs/slidev/blob/main/skills/slidev/SKILL.md --yes
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>hermes skills install https://github.com/trailofbits/skills/blob/main/plugins/ask-questions-if-underspecified/skills/ask-questions-if-underspecified/SKILL.md --yes
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>hermes skills install obra/superpowers --yes
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>步驟 2 請善用你下載的技能（ask-questions-if-underspecified與superpowers），先研究規劃如何解釋當前multi-agent 合作，請務必使用下載的技能plan，並生出plan檔案，絕對不可以只是自己模擬
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>步驟 3 根據你步驟 2的規劃派一個 Researcher（toolsets: web）：
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>搜集「LLM multi-agent 合作」的重點，回傳關鍵概念 + 每個概念至少一句說明+ 每個重點3篇代表性論文（標題/年份/連結）。用條列回傳。
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>步驟 4 收到 Researcher 摘要後，把那份摘要與你步驟 2的規劃「完整貼進」下一個 subagent的 context（因為它看不到前面的對話），派一個 Slide-maker（啟用 PowerPoint skill，toolsets: 程式執行 + 檔案）：
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>根據摘要與你步驟 2的規劃要做一份 8 頁 .pptx（包含封面 與 參考文獻頁）。
+</code></pre></div>
+<hr />
+<p><em>最後更新：2026 年 6 月</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到頂端
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.top", "toc.follow", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u8907\u88fd", "clipboard.copy": "\u8907\u88fd", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u7b26\u5408\u7684\u9805\u76ee", "search.result.one": "\u627e\u5230 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.placeholder": "\u6253\u5b57\u9032\u884c\u641c\u5c0b", "search.result.term.missing": "\u7f3a\u5c11\u5b57\u8a5e", "select.version": "\u9078\u64c7\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
