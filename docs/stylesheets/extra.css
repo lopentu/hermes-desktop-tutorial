@@ -16,6 +16,11 @@
   /* Used for link hover / focus states — a brighter green that complements
      the primary. */
   --md-accent-fg-color: #5c8a5a;
+
+  /* Body link color — a more vivid green so links stand out from the
+     near-black body text (the dark primary green blended in). Passes WCAG AA
+     contrast on white. */
+  --md-typeset-a-color: #2f7d4f;
 }
 
 .md-typeset {
@@ -51,4 +56,18 @@
 
 .md-sidebar--primary {
   display: none;
+}
+
+/* Make body links obvious: distinct color (set above) plus a persistent
+   underline, so they read as links without needing hover. Heading anchor
+   icons (.headerlink) are excluded so they aren't underlined/bolded. */
+.md-typeset a:not(.headerlink) {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 0.08em;
+  font-weight: 500;
+}
+
+.md-typeset a:not(.headerlink):hover {
+  text-decoration-thickness: 0.14em;
 }
